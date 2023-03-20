@@ -1,12 +1,10 @@
-import LinkedNode from "./LinkedNode.ts";
+import Graph from "./Graph.ts";
 
 function main() {
-  const myFirstLinkedNode = new LinkedNode("Diego G.");
-  const mySecondLinkedNode = new LinkedNode("Jorge");
-  const myThirdLinkedNode = new LinkedNode("Diego T.");
-  myFirstLinkedNode.addEdge(5, mySecondLinkedNode);
-  myFirstLinkedNode.addEdge(5, myThirdLinkedNode);
-  console.log(myFirstLinkedNode);
+  const myGraph = new Graph();
+  myGraph.addNode("Diego");
+  myGraph.addNode("Jorge", "Diego", 4);
+  myGraph.linkedNodes.forEach((value) => console.log(value));
 }
 
 main();
